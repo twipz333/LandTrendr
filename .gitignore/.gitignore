@@ -129,10 +129,10 @@ dmypy.json
 .pyre/
 
 # PyCharm files
-.idea/
+.idea
 
 #Python cache
-__pycache__/
+__pycache__
 
 #Temp files
 static/map.html
