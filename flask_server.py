@@ -6,7 +6,7 @@ app = Flask('Map', static_url_path='/static')
 @app.route('/')
 def index():
     main.getmap()
-    return app.send_static_file('map.html')
+    return app.send_static_file('index.html')
 
 
 if __name__ == '__main__':

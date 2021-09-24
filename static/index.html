@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LandTrendr</title>
+    <style>
+        #sidebarleft { position: absolute; }
+        #sidebarleft { overflow: auto; padding: 30px; left: 0px; }
+        #sidebarright { position: absolute; }
+        #sidebarright { overflow: auto; padding: 40px; right: 0px; }
+        #sidebarleft, #sidebarright {
+        width: 150px; background: #934817; border-right: 1px solid #231F20;
+        top: 0; /* Расстояние от верхнего края */
+        bottom: 0; /* Расстояние снизу  */
+        }
+    </style>
+</head>
+<body>
+<div id="sidebarright">
+    <form name="window" action="" class="f4"></form>
+                            <span class="topic4"><h3>Выходные параметры</h3></span>
+</div>
+<div id="sidebarleft">
+<form name="window" action="" class="f4">
+                        <span class="topic4"><h3>Ползунок ползуночек<h3></h3></span>
+                        <br><br>
+                        <div class="container">
+                            <input type="range" class="slider" id="slider" min="-150" max="150" value="1" step="1" oninput="outputUpdate(value)">
+                            <output for="slider" id="volume-end">Значение</output>
+                            <output for="slider" id="volume">1</output>
+                        </div>
+
+                        <script type="text/javascript">
+                            function outputUpdate(vol) {
+                                var output = document.querySelector('#volume');
+                                output.value = vol;
+                            }
+                        </script>
+
+                    </form>
+</div>
+</body>
+</html>
