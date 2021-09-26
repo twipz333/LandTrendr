@@ -1,4 +1,4 @@
-import folium, ee
+import folium, ee, traceback
 
 def add_ee_layer_to_map(self, ee_object, name, visual_params=None):
     try:
@@ -48,3 +48,4 @@ def add_ee_layer_to_map(self, ee_object, name, visual_params=None):
 
     except Exception as ex:
         print(f'Невозможно отобразить {name}:{ex}')
+        print(traceback.format_exc())
